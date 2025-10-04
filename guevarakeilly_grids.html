@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>guevarakeilly_grid-layout</title>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<style>
+    * {margin: 0; padding: 0;
+	body {
+		font-family: fascinate, sans-serif;
+		background: whitesmoke;
+	} @font-face {
+        font-family: 'Fascinate';
+		font-style: normal;
+        src: url(https://fonts.gstatic.com/s/fascinate/v22/z7NWdRrufC8XJK0IIElS3bzRZv-drrOg.woff2) format('woff2');
+		font-weight: 400;
+	} #page {
+		width: 928px;
+    	height: 1070px;
+    	background: white;
+   		margin: 24px auto;
+  		border: 1px solid gray;
+    	box-shadow: 2px 3px 6px gray;
+    	z-index: 0;
+	} h1 {
+        font: 48pt/1.4em fascinate;
+        text-align: center;
+        text-shadow: 1px 2px 3px pink;
+        margin: 24px 0;
+    } main {
+        width: 779px;
+        height: 785px;
+        margin: 24px auto;
+        border: 1px dashed pink;
+		display: grid;
+		grid-template: auto auto auto / auto auto;
+		gap: 3px;
+		background: whitesmoke;
+        box-shadow: 2px 3px 6px gainsboro;
+	} figure4 {
+		grid-area: 1/2/4/2;
+		height: 790px;
+	}
+    } .zoom {
+        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
+        background-size: 100%;
+        background-position: center;
+    } img:hover {
+        transform: scale(1.03);
+        transition: transform 0.5s;
+	} li:hover {
+		transform: scale(1.10);
+        transition: transform 0.5s;
+	}
+    } .zoom:hover {
+        background-size: 105%;
+        transition: background-size 0.5s;
+	} li {
+        font: 14pt/2.0em 'oswald';
+        list-style: none;
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		height 100vh;
+		float: left;
+	} ul {
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		height 100vh;
+		float: left;
+		background: pink;
+		width: 70px;
+        height: 43px;
+		margin-top: 25px;
+		margin-left: 430px;
+	 } a li {
+        color: black;
+    } a {
+        text-decoration: none;
+    } a li:hover {
+        background: rgba(169,225,245,0.50);
+		
+</style>
+</head>
+
+<body>
+	<div id="page">
+		<header>
+   			 <h1>Photography Grid</h1>
+		</header>
+	
+<div id="grid" class="grid">
+	<main>
+		<figure1> <a href="soap-long-shot.jpg"> <img src="grid-soap-long-shot.jpg" alt="" width="384" height="256" /> </a></figure1>
+		<figure2> <a href="soap-rocks copy.jpg"> <img src="grid-soap-rocks.jpg" width="384" height="256" /> </a></figure2>
+		<figure3> <a href="cookie-shot copy.jpg"> <img src="grid-cookie-shot.jpg" width="384" height="256" /> </a></figure3>
+		<figure4> <a href="cookie-drip.jpg"> <img src="grid-image-cookie-drip.jpg" alt="" width="392" height="785" id="cookiedrip" /> </a></figure4>
+	</main>
+	<ul>
+       <li><a href="index.html">Home</a></li>
+	</ul>
+</div> 
+</div>
+</body>
+</html>
