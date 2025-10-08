@@ -1,0 +1,197 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Check Boxes</title>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<style>
+	 * {margin: 0; padding: 0;
+    } @font-face {
+        font-family: 'Fascinate';
+		font-style: normal;
+        src: url(https://fonts.gstatic.com/s/fascinate/v22/z7NWdRrufC8XJK0IIElS3bzRZv-drrOg.woff2) format('woff2');
+		font-weight: 400;
+	} body {
+		background-color: whitesmoke;
+	} #page {
+		width: 928px;
+		height: 1350px;
+		background: white;
+		boarder: 1px solid darkgray;
+		margin: 0 auto;
+	} #banner {
+		width: 100%;
+		margin: 0;
+		float: none;
+		box-shadow: none;
+		boarder: none;
+	}
+ } .zoom {
+        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
+        background-size: 100%;
+        background-position: center;
+	} li:hover {
+		transform: scale(1.10);
+        transition: transform 0.5s;
+	}
+    } .zoom:hover {
+        background-size: 105%;
+        transition: background-size 0.5s;
+	} li {
+        font: 14pt/2.0em 'oswald';
+  		list-style: none;
+		align-items:center;
+		height 100vh;
+		float: left;
+        height: 40px;
+        text-align: center;
+		width: 90%;
+        margin-top: -4px;
+		margin-left: -50px;
+		max-width: 200px;
+  		text-wrap: pretty;
+		white-space: normal;
+	} ul {
+		display:flex;
+		justify-content: center;
+		align-items:center;
+		height 100vh;
+		float: left;
+        height: 40px;
+        text-align: center;
+        background: pink;
+		width: 100%;
+        margin-top: -4px;
+		margin-left: 0px;
+    } a li {
+        color: black;
+    } a {
+        text-decoration: none;
+    } a li:hover {
+        background: rgba(169,225,245,0.50);
+	} h1 {
+        font: 48pt/1.4em 'fascinate', static;
+        text-align: center;
+        text-shadow: 2px 3px 6px pink;
+		margin-top: 70px
+	} form {
+        background: pink;
+		box-shadow: 2px 3px 6px dimgray;
+        width: 400px;
+        margin: 36px auto;
+        padding: 24px;
+        font: 14pt/1.6em oswald;
+        border: 1px solid gray;
+    } input[type="text"] {
+        background: white;
+        font: 14pt/1.4em oswald;
+        width: 100%;
+        border: 1px dotted pink;
+	 } input[type="radio"] {
+        background: none;
+        font: 14pt/1.4em oswald;
+        width: 10%;
+		height: 10%;
+		outline: none;
+	 } input[type="checkbox"] {
+        background: none;
+        font: 14pt/1.4em oswald;
+        width: 10%;
+		height: 10%;
+		outline: none;
+	} .dropdown {
+        background: white;
+        font: 14pt/1.4em oswald;
+        width: 100%;
+		height: 100%;
+		outline: none;
+		boarder: grey;
+	} fieldset {
+        margin-top: 18px;
+		border-width: 0;
+		border: none;
+    } input[type="submit"] {
+        width: 20%;
+        height: 50px;
+		text-align: center;
+		background: lightyellow;
+		border-width: 0;
+		color: black;
+		margin-top: 40px;
+        margin-bottom: 12px;
+		font: 15pt/1.4em oswald;
+		display: block;
+     	margin: 0 auto;
+	} .submit:hover {
+		transform: scale(1.10);
+        transition: transform 0.5s;
+	}
+</style>
+<script language="JavaScript">
+    function toggle(source) {
+        checkboxes = document.getElementsByName('foo');
+        for(var checkbox in checkboxes)
+        checkboxes[checkbox].checked = source.checked;
+    }
+</script>
+</head>
+
+<body>
+	<div id="page">
+<img src="banner1.jpg" alt="banner1" class="banner" id="banner" />
+        <ul>
+            <li><a href="index.html">Home</a></li>
+			<li><a href="Meet-Keilly.html">Welcome Message</a></li>
+			<li><a href="KeillyGportfolio1.html">Portfolio</a></li>
+			<li><a href="guevarakeilly_assignment-5-tables.html">Portfolio Descriptions</a></li>
+			<li><a href="guevarakeilly_grids.html">Photography Grid</a></li> 
+			<li><a href="guevarakeilly-contact-forms.html">Contact Form</a></li> 
+        </ul>
+		
+<h1>Contact Form</h1>
+
+  <form action="https://formsubmit.co/guevak4@unlv.nevada.edu" method="POST">
+		<lable>First name</lable><br/>
+		<input type="text" id="fname" <br />
+		<label for="lname">Last name</label><br />
+		<input type="text" id="lname" /> <br />
+		
+	<fieldset>
+	  <legend> The reason for contacting</legend>
+	  <input type="radio" name="services" id="design" value="Design"/>
+			<label for="design">Design services</label> <br />
+		
+	  <input type="radio" name="services" id="consulting" value="Design"/>
+			<label for="consulting">Illustration</label> <br />
+		
+	  <input type="radio" name="services" id="UXD" value="User Experience Design"/>
+			<label for="design">Photography</label>
+	</fieldset>
+	
+	<fieldset>
+	  <legend>Operating system</legend>	
+	  <input type="checkbox" name="os" id="macos" value="MacOS" />
+			<lable for="macos">Macintosh</lable><br />
+	  <input type="checkbox" name="os" id="windows" value="Windows" />
+			<lable for="windows">Windows</lable><br />
+	  <input type="checkbox" name="unix" id="unix" value="UNIX" />
+			<lable for="unix">UNIX</lable>
+	</fieldset>
+		
+	<fieldset>
+	  <legend>Time frame</legend>
+			<select class="dropdown">
+				<option value="">When would you like to start a project?</option>
+				<option value="month">This month</option>
+				<option value="quarter">This quarter</option>
+				<option value="year">This year</option>
+				<option value="not sure">Not sure</option>
+			</select>
+	</fieldset><br />
+		
+		<input type="submit" class="submit" value="Submit" />
+    </form>
+
+</div>
+</body>
+</html>
