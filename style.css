@@ -1,37 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-}*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Lexend Deca"
-} body {
-	display: grid;
-	place-content: center;
-	height: 100vh;
-	width: 100vh;
-	overflow: hidden;
-	background: yellow;
-} .flipbook {
-	width: 1000px;
-	height: 600px;
-} .flipbook .hard {
-	background: red !important;
-	color: white;
-	font-weight: bold;
-	border: none;
-} .flipbook .page {
-	background: white;
-	diplasy: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
-	border: 1px solid rgba(0, 0, 0, 0.11);
-} .page img {
-	width: 30%;
-	object-fit: cover;
-	margin: auto;
-} .flipbook .page small {
-	font-size: 14px;
-	margin-bottom: 10px;
-}
+} #flipbook {
+		width: 900px;
+		height: 580px;
+		margin: 15px;
+		margin-top: 50px;
+		boarder: 1px solid dimgray;
+		box-shadow: 2px 3px 6px darkgray;
+	} .hard {
+		background: lightyellow !important;
+		color: black;
+		font-weight: bold;
+		border: none;
+	} #page img {
+		width: 100%;
+		object-fit: cover;
+		margin: auto;
+	} #text1{
+		font: 20pt/2.4em 'lexend deca', sans-serif;
+		diplasy: flex;
+		background: white;
+		color: black;
+		diplasy: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border: 1px solid white;
+	} #text2{
+		font: 20pt/2.4em 'lexend deca', sans-serif;
+		diplasy: flex;
+		background: white;
+		color: black;
+		diplasy: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+		border: 1px solid white;
