@@ -3,17 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>guevarakeilly_grid-layout</title>
-<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
     * {margin: 0; padding: 0;
-	body {
-		font-family: fascinate, sans-serif;
-		background: whitesmoke;
-	} @font-face {
-        font-family: 'Fascinate';
-		font-style: normal;
-        src: url(https://fonts.gstatic.com/s/fascinate/v22/z7NWdRrufC8XJK0IIElS3bzRZv-drrOg.woff2) format('woff2');
-		font-weight: 400;
+	} body {
+		font-family: 'lexend deca', sans-serif;
+		background: whitesmoke;;
 	} #page {
 		width: 928px;
     	height: 1070px;
@@ -23,10 +20,11 @@
     	box-shadow: 2px 3px 6px gray;
     	z-index: 0;
 	} h1 {
-        font: 48pt/1.4em fascinate;
+        font: 48pt/1.4em 'lexend deca', static;
         text-align: center;
         text-shadow: 1px 2px 3px pink;
         margin: 24px 0;
+		animation: fade-up 0.6s 0.4s backwards;
     } main {
         width: 779px;
         height: 785px;
@@ -37,27 +35,27 @@
 		gap: 3px;
 		background: whitesmoke;
         box-shadow: 2px 3px 6px gainsboro;
+		animation: fade-up 0.6s 0.4s backwards;
 	} figure4 {
 		grid-area: 1/2/4/2;
 		height: 790px;
-	}
     } .zoom {
-        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
         background-size: 100%;
         background-position: center;
-    } img:hover {
-        transform: scale(1.03);
-        transition: transform 0.5s;
 	} li:hover {
 		transform: scale(1.10);
         transition: transform 0.5s;
-	}
+		background: lightyellow;
     } .zoom:hover {
         background-size: 105%;
         transition: background-size 0.5s;
 	} li {
-        font: 14pt/2.0em 'oswald';
+        font: 14pt/2.0em 'lexend deca', static;
+		font-weight: 700;
+		background: pink;
         list-style: none;
+		width: 90px;
+        height: 43px;
 		display:flex;
 		justify-content: center;
 		align-items:center;
@@ -69,18 +67,40 @@
 		align-items:center;
 		height 100vh;
 		float: left;
-		background: pink;
-		width: 70px;
+		width: 90px;
         height: 43px;
 		margin-top: 25px;
-		margin-left: 430px;
+		margin-left: 415px;
+		animation: fade-up 0.6s 0.4s backwards;
 	 } a li {
         color: black;
-    } a {
-        text-decoration: none;
+		text-decoration: none;
     } a li:hover {
-        background: rgba(169,225,245,0.50);
+        background: lightyellow
+	} ul li ul li {
+		visibility: hidden;
+		width: 100%;
+		float: none;
+	} ul li:hover li {
+		visibility: visible;
+	} a {
+		text-decoration: none;
+	}span{
+		font: 20pt/2.0em 'roboto';
+		float: left;
+		line-height: 1.0em;
+		margin: 0 3px -5px 0;
+		color: pink;
+	} @keyframes fade-up {
+		0% { 
+			opacity: 0;
+			transform: translateY(30px) scale(0.9);
+		} 
 		
+		100% { 
+			opacity : 1; 
+			transform: translateY(0px) scale (1);
+		}
 </style>
 </head>
 

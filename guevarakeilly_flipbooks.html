@@ -19,21 +19,71 @@
 		background: white;
 		boarder: 1px solid darkgray; 
 		margin: 0 auto;
+	} .zoom {
+        background-size: 100%;
+        background-position: center;
+	} li:hover {
+		transform: scale(1.10);
+        transition: transform 0.5s;
+		background: lightyellow;
+    } .zoom:hover {
+        background-size: 105%;
+        transition: background-size 0.5s;
+	} ul {
+		max-width: 100%;
+		margin-top: -4px;
+		margin-left: 0;
+		padding: 0;
+	} li {
+        width: 24.92%;
+		max-width: 100%;
+		height: 45px;
+		float: left;
+  		list-style: none;
+		text-align: center;
+		font: 15pt/2em 'roboto';
+		background: pink;
+		padding: none;
+		font-weight: 700;
+    } a li {
+        color: black;
+		text-decoration: none;
+    } a li:hover {
+        background: lightyellow;
+	}li:last-child {
+		border-left: 1px solid white;
+	} ul li ul li {
+		visibility: hidden;
+		width: 100%;
+		float: none;
+	} ul li:hover li {
+		visibility: visible;
+	} a {
+		text-decoration: none;
+	}span{
+		font: 20pt/2.0em 'roboto';
+		float: left;
+		line-height: 1.0em;
+		margin: 0 3px -5px 0;
+		color: pink;
 	} h1 {
-        font: 48pt/1.4em 'lexend deca', static;
+         font: 48pt/1.4em 'lexend deca', static;
         text-align: center;
         text-shadow: 2px 3px 6px pink;
-		margin-top: 70px;
+		margin-top: 80px;
+		animation: fade-up 0.6s 0.4s backwards;
     } h2 {
         font: 20pt/2.4em 'roboto', sans-serif;
         text-align: center;
 		margin-top: -50px;
+		animation: fade-up 0.6s 0.4s backwards;
 	} p {
 		font: 14pt/1.4em 'roboto', sans-serif;
 		font-style: thin;
 		width: 768px;
 		margin: 18px auto;
 		margin-top: 33px;
+		animation: fade-up 0.6s 0.4s backwards;
 	} #banner {
 		width: 100%;
 		margin: 0;
@@ -47,6 +97,7 @@
 		margin-top: 50px;
 		boarder: 1px solid dimgray;
 		box-shadow: 2px 3px 6px darkgray;
+		animation: fade-up 0.6s 0.4s backwards;
 	} .hard {
 		background: lightyellow !important;
 		color: black;
@@ -78,53 +129,16 @@
 		align-items: center;
 		gap: 10px;
 		border: 1px solid white;
- } .zoom {
-        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
-        background-size: 100%;
-        background-position: center;
-	} li:hover {
-		transform: scale(1.10);
-        transition: transform 0.5s;
-    } .zoom:hover {
-        background-size: 105%;
-        transition: background-size 0.5s;
-	} ul {
-		max-width: 100%;
-		margin-top: -4px;
-		margin-left: 0;
-		padding: 0;
-	} li {
-        width: 24.9%;
-		max-width: 100%;
-		height: 45px;
-		float: left;
-  		list-style: none;
-		text-align: center;
-		font: 15pt/2em 'roboto';
-		font-weight: 700;
-		background: pink;
-		padding: none;
-    } a li {
-        color: black;
-		text-decoration: none;
-    } a li:hover {
-        background: lightyellow;
-	}li:last-child {
-		border-left: 1px solid white;
-	} ul li ul li {
-		visibility: hidden;
-		width: 100%;
-		float: none;
-	} ul li:hover li {
-		visibility: visible;
-	} a {
-		text-decoration: none;
-	}span{
-		font: 20pt/2.0em 'roboto';
-		float: left;
-		line-height: 1.0em;
-		margin: 0 3px -5px 0;
-		color: pink;
+} @keyframes fade-up {
+		0% { 
+			opacity: 0;
+			transform: translateY(30px) scale(0.9);
+		} 
+		
+		100% { 
+			opacity : 1; 
+			transform: translateY(0px) scale (1);
+		}
 </style>	
 </head>
 
@@ -132,8 +146,8 @@
 	<div id="page">
 <img src="banner1.jpg" alt="banner1" class="banner" id="banner" 
 />
-		<ul> 
-			<li>Home</li>
+		<ul>
+          <li><a href="index.html">Home</a></li>
 			 <a  href="Meet-Keilly.html"><li>Welcome Message</li></a>
 			 <a  href="KeillyGportfolio1.html"><li>Portfolio</li></a>
 			<li>
@@ -142,16 +156,15 @@
 			 <a href="guevarakeilly_assignment-5-tables.html"><li>Portfolio Descriptions</li></a>
 			 <a  href="guevarakeilly_grids.html"><li>Photography Grid</li></a>
 			 <a  href="guevarakeilly-contact.html"><li>Contact Form</li></a>
-			 <a  href="guevarakeilly_flipbooks.html"><li>Digital Booklets</li></a>
+			 <a  href="guevarakeilly_flipbooks.html"><li>Digital Booklet</li></a>
 			</ul>
 			</li>
-		</ul>
+	  </ul>
 <h1 >Keilly Guevara Flores</h1>
-		<h2> DIGITAL BOOKLETS </h2>
-<p> Here you will find <em>The Little Lamp</em> comic book I made in my GRC 315 Illustration I class.</p>
-
-	<div class="flipbook" id="flipbook">
-		<div class="hard"> <img src="littlelamp.png" alt="" width="100%" /></div>
+		<h2> DIGITAL BOOKLET </h2>
+      <p> Here you will find a digital version of the <em>The Little Lamp</em> comic book I made in my GRC 315 Illustration I class. To turn the page, drag or click on of the corners.</p>
+<div class="flipbook" id="flipbook">
+    <div class="hard"> <img src="littlelamp.png" alt="" width="100%" /></div>
 		<div class="hard"></div>
 		<div id="text1"> By Keilly Guevara </div>
 		<div> <img src="littlelampp1.png"  alt="" width="100%"/></div>

@@ -11,6 +11,7 @@
   gtag('config', 'G-5XNQ5DSDJ8');
 </script>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <title>GuevaraKeilly_Assignment1-Simple-HTML-Page</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,81 +27,13 @@
 		background: white;
 		boarder: 1px solid darkgray; 
 		margin: 0 auto;
-	} #star {
-		margin-top: 20px;
-		margin-left: -5px;
-		width: 5%;
-		max-width:100%;
-        position: relative;
-		animation-name: flying;
-		animation-duration: 3s;
-		animation-fill-mode: forwards;
-		animation-timing-function: ease-in;
-		}
-		@keyframes flying {
-			0% {left: 10px; transform: rotate(360deg);}
-			100% {left: 120vw;} 
-	}#star2 {
-		margin-top: -20px;
-		margin-left: -5px;
-		width: 5%;
-		max-width:100%;
-        position: relative;
-		animation-name: flying;
-		animation-duration: 3s;
-		animation-fill-mode: forwards;
-		animation-timing-function: ease-in;
-		}
-		@keyframes flying {
-			0% {left: 10px; transform: rotate(360deg);}
-			100% {left: 120vw;} 
-	} h1 {
-        font: 48pt/1.4em 'lexend deca', static;
-        text-align: center;
-        text-shadow: 2px 3px 6px pink;
-		margin-top: 1px;
-    } h2 {
-        font: 20pt/2.4em 'roboto', sans-serif;
-        text-align: center;
-		margin-top: -50px;
-	} p {
-		font: 14pt/1.4em 'roboto', sans-serif;
-		font-style: thin;
-		width: 768px;
-		margin: 18px auto;
-		margin-top: 30px;
-	} .text-img {
-		width: 60%;	
-		float: left;
-		margin: 6px 24px 24px 0;
-		boarder: 1px solid dimgray;
-		box-shadow: 2px 3px 6px darkgray;
-		margin-top: 5px
-	} #banner {
-		width: 100%;
-		margin: 0;
-		float: none;
-		box-shadow: none;
-		border: none;
-	} #ending{
-		margin-top: 100px;
-		font-size: 14pt;
-	} #bird{
-		width: 50%;
-		margin-left: 230px;
-		margin-right: 230px;
-		margin-top: 80px;
-		position: relative;
-		animation-name: fade-in;
-		animation-duration: 3s;
-		animation-fill-mode: forwards;
- } .zoom {
-        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
+} .zoom {
         background-size: 100%;
         background-position: center;
 	} li:hover {
 		transform: scale(1.10);
         transition: transform 0.5s;
+		background: lightyellow;
     } .zoom:hover {
         background-size: 105%;
         transition: background-size 0.5s;
@@ -110,7 +43,7 @@
 		margin-left: 0;
 		padding: 0;
 	} li {
-        width: 24.9%;
+        width: 24.92%;
 		max-width: 100%;
 		height: 45px;
 		float: left;
@@ -125,7 +58,7 @@
 		text-decoration: none;
     } a li:hover {
         background: lightyellow;
-	}li:last-child {
+	} li:last-child {
 		border-left: 1px solid white;
 	} ul li ul li {
 		visibility: hidden;
@@ -135,55 +68,158 @@
 		visibility: visible;
 	} a {
 		text-decoration: none;
-	}span{
-		font: 20pt/2.0em 'roboto';
+	} span {
+		font: 15pt/2em 'roboto';
 		float: left;
-		line-height: 1.0em;
 		margin: 0 3px -5px 0;
 		color: pink;
-	} @media only screen and (max-width: 750px) {
-			#page, main {
-				height: 1290px;
-		}	.text-img {
-				float: none;
-				margin-top: 20px;
-				width: 95%;
-			} h1 {
-        		font: 30pt/1.4em 'lexend deca', static;
-				margin-top: 50px;
-			} h2 {
-       			font: 16pt/2.4em 'roboto', sans-serif;
-				text-align: center;
-				margin-top: -40px;
-			} p {
-				font: 16pt/1.4em 'roboto';
-				width: 80%;
-				margin: 15px auto;
-			} ul {
-				max-width: 100%;	
-			} li {
-				font: 9pt/1.2em 'roboto';
-				text-align: center;
-				padding: none;
-				border: none;
-				margin-top: 0 auto;
-				height: 33px;
-				width: 24.75%;
-				font-weight: 700;
-		} a {
-			text-align: center;
-			} span {
-				line-height: 1.0em;
-				margin: 0 6 -30 0;
-				text-align: center;
-				height: 35px;
-			} #bird{
-				width: 15%;
-				float: right;
-				margin-top: -10px;
-			} #ending {
-				margin-bottom: 20px;
+	} #star2 {
+		margin-top: -20px;
+		margin-left: -5px;
+		width: 5%;
+		max-width:100%;
+        position: relative;
+		animation-name: flying;
+		animation-delay: 0.4s;
+		animation-duration: 3s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-in;
 		}
+		@keyframes flying {
+			0% {left: 10px; transform: rotate(360deg);}
+			100% {left: 120vw;} 
+	} h1 {
+        font: 48pt/1.4em 'lexend deca', static;
+        text-align: center;
+        text-shadow: 2px 3px 6px pink;
+		margin-top: 1px;
+		animation: autoShow();
+    } h2 {
+        font: 20pt/2.4em 'roboto', sans-serif;
+        text-align: center;
+		margin-top: -50px;
+		animation: autoShow();
+	} p {
+		font: 14pt/1.4em 'roboto', sans-serif;
+		font-style: thin;
+		width: 768px;
+		margin: 18px auto;
+		margin-top: 30px;
+		text-align: justify;
+ 	 	text-justify: inter-word;
+	} #text-img {
+		width: 60%;	
+		float: left;
+		margin: 6px 24px 24px 0;
+		boarder: 1px solid dimgray;
+		box-shadow: 2px 3px 6px darkgray;
+		margin-top: 5px;
+	} .autoShow {
+	 	animation: text-appear both;
+		animation-timeline: view();
+		animation-range: entry 0% cover 50vh;
+	}
+	@keyframes text-appear {
+		from {
+			opacity: 0;
+			transform: translateY(100px);
+		}
+		to{
+			opacity: 1;
+			transform: translateY(0);
+		}
+	} #banner {
+		width: 100%;
+		margin: 0;
+		float: none;
+		box-shadow: none;
+		border: none;;
+	} #bird {
+		display: block; 
+ 		margin-left: auto; 
+  		margin-right: auto; 
+  		width: 50%;
+		margin-top: 100px;
+		position: relative;
+		animation: fade-up 0.6s 0.4s backwards;
+	} @keyframes fade-up {
+		0% { 
+			opacity: 0;
+			transform: translateY(30px) scale(0.9);
+		} 
+		
+		100% { 
+			opacity : 1; 
+			transform: translateY(0px) scale (1);
+		}
+	}
+	} @media only screen and (max-width: 949px) {
+			#page, main {
+	} #page {
+		width: 928px;
+		max-width:100%;
+		height: 2090px;
+	} li {
+		font: 12pt/1.1em 'roboto';
+		font-weight: 700;
+		width: 24.85%; 
+		font-display: block;
+	} .drop {
+		margin-top: 29px;
+	} h1 {
+		margin-top: 20px;
+    } h2 {
+		margin-top: -50px;
+	} p {
+		font: 12pt/1.4em 'roboto', sans-serif;
+		font-style: thin;
+		width: 80%;
+		margin: 18px auto;
+		margin-top: 30px;
+		text-align: justify;
+ 	 	text-justify: inter-word;
+	} #text-img {
+		width: 100%;	
+		boarder: 1px solid dimgray;
+		box-shadow: 2px 3px 6px darkgray;
+		margin-top: 5px;
+		float: none;
+		display: block; 
+ 		margin-left: auto; 
+  		margin-right: auto; 
+	} .autoShow {
+	 	animation: text-appear both;
+		animation-timeline: view();
+		animation-range: entry 0% cover 50vh;
+	}
+	@keyframes text-appear {
+		from {
+			opacity: 0;
+			transform: translateY(100px);
+		}
+		to{
+			opacity: 1;
+			transform: translateY(0);
+		}
+	} #banner {
+		width: 100%;
+		margin: 0;
+		float: none;
+		box-shadow: none;
+		border: none;
+	} #ending{
+		margin-top: 100px;
+		font-size: 14pt;
+	} #bird{
+		display: block; 
+ 		margin-left: auto; 
+  		margin-right: auto; 
+  		width: 80%;
+		margin-top: 100px;
+		position: relative;
+		}
+		}
+
 </style>	
 </head>
 
@@ -192,25 +228,24 @@
 <img src="banner1.jpg" alt="banner1" class="banner" id="banner" 
 />
 		<ul> 
-			<li>Home</li>
+			<li><a href="index.html">Home</a></li>
 			 <a  href="Meet-Keilly.html"><li>Welcome Message</li></a>
 			 <a  href="KeillyGportfolio1.html"><li>Portfolio</li></a>
 			<li>
 				More
-			<ul>
+			<ul class="drop">
 			 <a href="guevarakeilly_assignment-5-tables.html"><li>Portfolio Descriptions</li></a>
 			 <a  href="guevarakeilly_grids.html"><li>Photography Grid</li></a>
 			 <a  href="guevarakeilly-contact.html"><li>Contact Form</li></a>
-			 <a  href="guevarakeilly_flipbooks.html"><li>Digital Booklets</li></a>
+			 <a  href="guevarakeilly_flipbooks.html"><li>Digital Booklet</li></a>
 			</ul>
 			</li>
 		</ul>
-<img src="kglogo.png" alt="logo" id="bird" />
-<img id="star" src="star-icon.png" />
-<h1 >Keilly Guevara Flores</h1>
-		<h2> DIGITAL PORTFOLIO </h2>
-<img id="star2" src="star-icon.png" />
-<p><img src="kgphoto.jpg" alt="kgphoto" class="text-img" id=".text-image" /> Hello there! Welcome to my home page! I am Keilly Guevara, a senior at UNLV majoring in Graphic Design. Some background information about myself, my family is from Guatemala but I was born and raised here in Las Vegas. In my free time I love to spend time with my family watching movies, as well as baking, reading, drawing, and painting. Lately I have delved into reading classical books, I was able to make some illustrations on the Count of Monte Cristo for one of my class assignments. On the other pages you will find my class projects from illustration, graphics, photography, and sculpture. </p>
+<img src="kglogo.png" alt="logo" id="bird" class="fade-up"/>
+<h1 class="autoShow" >Keilly Guevara Flores </h1>
+		<h2 class="autoShow"> DIGITAL PORTFOLIO </h2>
+<img src="star-icon.png" alt="star" id="star2" />
+<p class="autoShow"><img src="kgphoto.jpg" alt="kgphoto" class="autoShow" id="text-img" /> Hello there! Welcome to my home page! I am Keilly Guevara, a senior at UNLV majoring in Graphic Design. I was born and raised in Las Vegas, Nevada. My family is from Guatemala. I love to spend time with my family watching movies, as well as baking, reading, drawing, and painting. Lately I have delved into reading classical books, which inspired me to make some illustrations on the Count of Monte Cristo for one of my class assignments. On the other pages you will find my class projects from illustration, graphics, photography, and sculpture. Feel free to take a look around and explore. </p>
 </div> 
 </body>
 </html>

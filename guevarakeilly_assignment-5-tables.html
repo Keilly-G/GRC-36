@@ -3,19 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Assignment 5 Tables</title>
-<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
 	 * {margin: 0; padding: 0;
-    } @font-face {
-        font-family: 'Fascinate';
-		font-style: normal;
-        src: url(https://fonts.gstatic.com/s/fascinate/v22/z7NWdRrufC8XJK0IIElS3bzRZv-drrOg.woff2) format('woff2');
-		font-weight: 400;
 	} body {
 		background-color: whitesmoke;
 	} #page {
 		width: 928px;
-		height: 1700px;
+		height: 1750px;
 		background: white;
 		boarder: 1px solid darkgray;
 		margin: 0 auto;
@@ -25,54 +22,59 @@
 		float: none;
 		box-shadow: none;
 		boarder: none;
-	}
- } .zoom {
-        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
+} .zoom {
         background-size: 100%;
         background-position: center;
 	} li:hover {
 		transform: scale(1.10);
         transition: transform 0.5s;
-	}
+		background: lightyellow;
     } .zoom:hover {
         background-size: 105%;
         transition: background-size 0.5s;
-	} li {
-        font: 14pt/2.0em 'oswald';
-  		list-style: none;
-		display:flex;
-		justify-content: center;
-		align-items:center;
-		height 100vh;
-		float: left;
-        height: 40px;
-        text-align: center;
-		width: 90%;
-        margin-top: -4px;
-		margin-left: -50px;
 	} ul {
-		display:flex;
-		justify-content: center;
-		align-items:center;
-		height 100vh;
+		max-width: 100%;
+		margin-top: -4px;
+		margin-left: 0;
+		padding: 0;
+	} li {
+        width: 24.92%;
+		max-width: 100%;
+		height: 45px;
 		float: left;
-        height: 40px;
-        text-align: center;
-        background: pink;
-		width: 100%;
-        margin-top: -4px;
-		margin-left: 0px;
+  		list-style: none;
+		text-align: center;
+		font: 15pt/2em 'roboto';
+		background: pink;
+		padding: none;
+		font-weight: 700;
     } a li {
         color: black;
-    } a {
-        text-decoration: none;
+		text-decoration: none;
     } a li:hover {
-        background: rgba(169,225,245,0.50);
+        background: lightyellow;
+	}li:last-child {
+		border-left: 1px solid white;
+	} ul li ul li {
+		visibility: hidden;
+		width: 100%;
+		float: none;
+	} ul li:hover li {
+		visibility: visible;
+	} a {
+		text-decoration: none;
+	}span{
+		font: 20pt/2.0em 'roboto';
+		float: left;
+		line-height: 1.0em;
+		margin: 0 3px -5px 0;
+		color: pink;
 	} h1 {
-        font: 48pt/1.4em 'fascinate', static;
+        font: 48pt/1.4em 'lexend deca', static;
         text-align: center;
         text-shadow: 2px 3px 6px pink;
-		margin-top: 70px
+		margin-top: 80px;
+		animation: fade-up 0.6s 0.4s backwards;
 	} table {
 		font-style: normal;
 		width: 78%;
@@ -80,20 +82,21 @@
 		margin: 20px auto;
 		box-shadow: 2px 3px 6px pink;
 		border-collapse: collapse;
-		font-family: 'oswald';
+		font-family: 'roboto';
 		font-style: normal;
         src: url(https://fonts.gstatic.com/s/fascinate/v22/z7NWdRrufC8XJK0IIElS3bzRZv-drrOg.woff2) format('woff2');
 		font-weight: 400;
 		margin-top: 70px;
-		//background: url("pink-light.png"), 25%;
+		animation: fade-up 0.6s 0.4s backwards;
 	} td, th {
 		height: 30px;
 	} #th2 {
-		font: 24px/1.4em 'oswald';
+		font: 24px/1.4em 'roboto';
 		height: 20px;
 		position: sticky;
 		background-color: lightyellow;
 		top: 0;
+		font-weight: 700;
 	} td{
 		height: 90px;
 		padding: 8px 30px;
@@ -101,9 +104,18 @@
 		background: rgba(255,20,147,0.09);
 	} tr:nth-child(1) {
 		background: pink;
-		font: 35px/1.4em 'oswald';
+		font: 35px/1.4em 'roboto';
 		height: 70px;
-	}
+	} @keyframes fade-up {
+		0% { 
+			opacity: 0;
+			transform: translateY(30px) scale(0.9);
+		} 
+		
+		100% { 
+			opacity : 1; 
+			transform: translateY(0px) scale (1);
+		}
 </style>
 </head>
 
@@ -111,14 +123,20 @@
 	<div id="page">
 <img src="banner1.jpg" alt="banner1" class="banner" id="banner" 
 />
-        <ul>
+         <ul>
             <li><a href="index.html">Home</a></li>
-			<li><a href="Meet-Keilly.html">Welcome Message</a></li>
-			<li><a href="KeillyGportfolio1.html">Portfolio</a></li>
-			<li><a href="guevarakeilly_assignment-5-tables.html">Portfolio Descriptions</a></li>
-			<li><a href="guevarakeilly_grids.html">Photography Grid</a></li>
-			<li><a href="guevarakeilly-contact.html">Contact Form</a></li> 
-        </ul>
+			 <a  href="Meet-Keilly.html"><li>Welcome Message</li></a>
+			 <a  href="KeillyGportfolio1.html"><li>Portfolio</li></a>
+			<li>
+				More
+			<ul>
+			 <a href="guevarakeilly_assignment-5-tables.html"><li>Portfolio Descriptions</li></a>
+			 <a  href="guevarakeilly_grids.html"><li>Photography Grid</li></a>
+			 <a  href="guevarakeilly-contact.html"><li>Contact Form</li></a>
+			 <a  href="guevarakeilly_flipbooks.html"><li>Digital Booklet</li></a>
+			</ul>
+			</li>
+	  </ul>
 		
 <h1>Keilly Guevara Flores</h1>
 

@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <style>
     * {margin: 0; padding: 0;
     } @font-face {
@@ -12,10 +14,11 @@
         src: url(https://fonts.gstatic.com/s/fascinate/v22/z7NWdRrufC8XJK0IIElS3bzRZv-drrOg.woff2) format('woff2');
 		font-weight: 400;
     } h1 {
-        font: 48pt/1.4em fascinate;
+        font: 48pt/1.4em 'lexend deca', static;
         text-align: center;
         text-shadow: 1px 2px 3px pink;
         margin: 24px 0;
+		animation: fade-up 0.6s 0.4s backwards;
     } #textbox {
         width: 1024px;
         height: 928px;
@@ -35,26 +38,32 @@
         border: 1px solid gray;
         box-shadow: 2px 3px 6px gray;
         transition: transform 0.5s;
+		animation: fade-up 0.6s 0.4s backwards;
     } figcaption {
-        font: 12pt/1.4em oswald;
+        font: 10pt/1.4em roboto;
         margin-top: 3px;
-   }
+		animation: fade-up 0.6s 0.4s backwards;
     } .zoom {
-        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
         background-size: 100%;
         background-position: center;
     } img:hover {
         transform: scale(1.03);
         transition: transform 0.5s;
+	} .zoom {
+        background: url("../Tutorial 4 Portfolio/thumb-tulip.jpg");
+        background-size: 100%;
+        background-position: center;
 	} li:hover {
 		transform: scale(1.10);
         transition: transform 0.5s;
-	}
+		background: lightyellow;
     } .zoom:hover {
         background-size: 105%;
         transition: background-size 0.5s;
 	} li {
-        font: 14pt/1.0em 'oswald';
+        font: 14pt/1.0em 'roboto';
+		font-weight: 700;
+		background: pink;
         list-style: none;
 		display:flex;
 		justify-content: center;
@@ -73,20 +82,42 @@
 		align-items:center;
 		height 100vh;
 		float: left;
-		background: pink;
-		width: 18%;
+		width: 23%;
         height: 43px;
 		margin-top: 25px;
-		//margin-left: 430px;
 		margin: 10px;
 		margin-left: -10px;
 		display: center;
+		animation: fade-up 0.6s 0.4s backwards;
 	 } a li {
         color: black;
-    } a {
-        text-decoration: none;
+		text-decoration: none;
     } a li:hover {
-        background: rgba(169,225,245,0.50);
+        background: lightyellow
+	} ul li ul li {
+		visibility: hidden;
+		width: 100%;
+		float: none;
+	} ul li:hover li {
+		visibility: visible;
+	} a {
+		text-decoration: none;
+	}span{
+		font: 20pt/2.0em 'roboto';
+		float: left;
+		line-height: 1.0em;
+		margin: 0 3px -5px 0;
+		color: pink;
+	} @keyframes fade-up {
+		0% { 
+			opacity: 0;
+			transform: translateY(30px) scale(0.9);
+		} 
+		
+		100% { 
+			opacity : 1; 
+			transform: translateY(0px) scale (1);
+		}
 
 </style>
 </head>
